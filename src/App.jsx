@@ -14,12 +14,17 @@ function App() {
       setCount(count - 1)
     }
   }
+  const [isFlipped, setIsFlipped] = useState(false);
+  const handleFlip = () => {
+    setIsFlipped(!isFlipped);
+  }
   return (
     <div className="App">
-      <h1>Quiz review</h1>
-      <h3>Quizlet typebeat</h3>
-      <div className="info-box">
-        <div className="question-answer">
+      <h1>Baldurs Gate 3 lore review</h1>
+      <h3>Test your knowledge of Baldur’s Gate 3 with this trivia quiz!</h3>
+      <h3>Questions amount: {question.length}</h3>
+      <div className="info-box" onClick = {handleFlip}>
+        <div className={`question-answer ${isFlipped ? "flipped" : ""}`}>
           <div className ="question">
             <h2 >Question: {question[count]}</h2>
           </div>
