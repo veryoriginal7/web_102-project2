@@ -15,12 +15,12 @@ function App() {
   const [hiddenNext, setHiddenNext] = useState(false);
   
   const hiddenButton = ()=>{
-    if (count <= 1) {
+    if (count < 1) {
       setHiddenPrev(true);
     } else {
       setHiddenPrev(false);
     }
-    if (count >= (question.length - 1)) {
+    if (count > (question.length - 1)) {
       setHiddenNext(true);
     } else {
       setHiddenNext(false);
