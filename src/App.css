@@ -68,6 +68,10 @@
   transform: rotateX(180deg);
 }
 
+.hidden{
+  visibility: hidden;
+}
+
 .question, .answer{
   position: absolute;
   backface-visibility: hidden;
